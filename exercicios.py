@@ -142,3 +142,39 @@ for i in lista:
     else:
         pass
 # %%
+### Exercício 10. Agregação de Dados por Categoria
+# Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+
+vendas = [
+    {'id': 1, 'categoria': 'Eletrônicos', 'produto': 'Notebook', 'valor': 2500.00},
+    {'id': 2, 'categoria': 'Roupas', 'produto': 'Camiseta', 'valor': 45.00},
+    {'id': 3, 'categoria': 'Eletrônicos', 'produto': 'Mouse', 'valor': 85.00},
+    {'id': 4, 'categoria': 'Alimentos', 'produto': 'Arroz', 'valor': 25.00},
+    {'id': 5, 'categoria': 'Roupas', 'produto': 'Calça', 'valor': 120.00},
+    {'id': 6, 'categoria': 'Eletrônicos', 'produto': 'Teclado', 'valor': 250.00},
+    {'id': 7, 'categoria': 'Alimentos', 'produto': 'Feijão', 'valor': 18.00},
+    {'id': 8, 'categoria': 'Roupas', 'produto': 'Jaqueta', 'valor': 280.00},
+    {'id': 9, 'categoria': 'Eletrônicos', 'produto': 'Monitor', 'valor': 800.00},
+    {'id': 10, 'categoria': 'Alimentos', 'produto': 'Leite', 'valor': 8.50},
+    {'id': 11, 'categoria': 'Roupas', 'produto': 'Sapato', 'valor': 150.00},
+    {'id': 12, 'categoria': 'Eletrônicos', 'produto': 'Webcam', 'valor': 320.00},
+]
+
+total_eletronicos = 0
+total_roupa = 0
+total_alimento = 0
+
+for i in vendas:
+    # print(i['id'], i['categoria'], i['valor'])
+    if i['categoria'] == 'Eletrônicos':
+        total_eletronicos += i['valor']
+        print(total_eletronicos)
+    elif i['categoria'] == 'Roupas':
+        total_roupa += i['valor']
+        print(total_roupa)
+    else:
+        total_alimento += i['valor']
+        print(total_alimento)
+
+print(f'O total de vendas de eletronicos foi de {total_eletronicos}, de roupas foi de {total_roupa} e de alimentos foi de {total_alimento}')
+# %%
