@@ -71,3 +71,43 @@ print(valor[2])
 
 # if log['level'] == 'ERROR':
 #     print(log['message'])
+
+# %%
+### Exercício 4: Validação de Dados de Entrada
+# Antes de processar os dados de usuários em um sistema de recomendação, 
+# você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
+# fornecido um email válido. Escreva um programa que valide essas condições 
+# e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+
+email_valido = False
+idade_valida = False
+
+try:
+    email = input('Insira seu email: ')
+    if any(email.isdigit() for i in email):
+        raise ValueError('O email deve conter apenas letras')
+    else:
+        print('Email válido', email)
+        email_valido = True
+except ValueError as e:
+    print(e)
+
+try:
+    idade = int(input('Digite sua idade: '))
+    if idade < 0 or idade < 18 or idade > 65:
+        print('Por favor, digite uma idade válida')
+    else:
+        print('Idade válida', idade)
+        idade_valida = True
+except ValueError:
+    print('A idade só pode ter números')
+    
+if email_valido and idade_valida:
+    print('Dados de usuário válidos')
+else:
+    print('Cadastro incompleto')
+
+
+    
+
+# %%
