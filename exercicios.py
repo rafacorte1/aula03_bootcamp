@@ -178,3 +178,19 @@ for i in vendas:
 
 print(f'O total de vendas de eletronicos foi de {total_eletronicos}, de roupas foi de {total_roupa} e de alimentos foi de {total_alimento}')
 # %%
+### Exercício 11. Leitura de Dados até Flag
+# Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
+
+palavras = []
+entrada = ''
+
+while entrada != 'sair':
+    entrada = input('Digite uma palavra para continuar ou sair para sair: ')
+# %%
+### Exercício 12. Validação de Entrada
+# Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+numero = int(input('Digite um numero: '))
+
+while numero > 0 and numero < 10:
+    numero = int(input('Digite um numero: '))
+# %%
