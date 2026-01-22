@@ -37,3 +37,20 @@ for palavra in palavras:
 
 print(contagem_de_palavras)
 # %%
+### Exercício 2: Classificação de Dados de Sensor
+# Imagine que você está trabalhando com dados de sensores IoT. 
+# Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
+# como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
+
+temperaturas = [0, 20, 40]
+
+for i in temperaturas:
+    if i <= 19:
+        print('Temperatura baixa')
+    elif i <= 39:
+        print("Temperatura normal")
+    else:
+        print('Temperatura alta')
+   
+
+# %%
