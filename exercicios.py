@@ -19,3 +19,21 @@ for i in precos:
         print('Dados válidos')
     else:
         print('Dados inválidos')
+
+# %%
+### Exercício 6. Contagem de Palavras em Textos
+# Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
+
+texto = "hoje e nossa terceira aula do bootcamp , bootcamp de python"
+palavras = texto.split()
+print(palavras)
+contagem_de_palavras = {}
+
+for palavra in palavras:
+    if palavra in contagem_de_palavras:
+        contagem_de_palavras[palavra] + 1
+    else:
+        contagem_de_palavras[palavra] = 1
+
+print(contagem_de_palavras)
+# %%
