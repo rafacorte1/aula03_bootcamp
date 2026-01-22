@@ -111,3 +111,34 @@ else:
     
 
 # %%
+
+### Exercício 5: Detecção de Anomalias em Dados de Transações
+# Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
+# transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
+# a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
+# Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
+
+transacao = {'valor': 12000, 'hora': 20}
+
+valor = transacao['valor']
+print(valor)
+hora = transacao['hora']
+print(hora)
+
+if valor >= 10000 and hora >= 18:
+    print('Transação suspeita')
+else:
+    pass
+# %%
+
+### Exercício 9. Extração de Subconjuntos de Dados
+# Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
+
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for i in lista:
+    if i % 2 == 0:
+        print(i)
+    else:
+        pass
+# %%
